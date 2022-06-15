@@ -1,0 +1,28 @@
+#To update package manager
+sudo apt-get update
+#To search app in PM
+sudo apt-cache search jenkins
+#To install specific version
+sudo apt-cache madison jenkins
+#To install latest version
+sudo apt-get install jenkins -y
+#to list out users
+sudo cat /etc/passwd
+#To switch to jenkins user
+su jenkins
+#Jenkins Home dir
+/var/lib/jenkins
+#To change jenkins Home_dir
+export JENKINS_HOME=new dir
+#To see all Env variables
+set
+#To know the current user
+whoami
+#To know current work directory
+pwd
+#To reset jenkins passwd
+passwd jenkins
+#To view folders in tree structure
+sudo apt-get install tree -y
+#To read contents page by page
+cat springpetclinic/config.xml | less
