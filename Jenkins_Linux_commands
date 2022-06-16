@@ -26,3 +26,6 @@ passwd jenkins
 sudo apt-get install tree -y
 #To read contents page by page
 cat springpetclinic/config.xml | less
+to start/stop/enable a service
+systemctl start/stop/enable/restart/status jenkins
+service jenkins start/stop/enable/restart/status
