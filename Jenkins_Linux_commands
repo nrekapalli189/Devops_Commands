@@ -8,6 +8,8 @@ sudo apt-cache madison jenkins
 sudo apt-get install jenkins -y
 #to list out users
 sudo cat /etc/passwd
+#To create/become new user
+adduser <username>
 #To switch to jenkins user
 su jenkins
 #Jenkins Home dir
