@@ -1,0 +1,7 @@
+$-normal user
+#-super/root user
+cal
+date
+df -free space
+free -howmuch memory free
+man ls -for manual
