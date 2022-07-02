@@ -14,4 +14,31 @@ git status
 
 //commit history
 git log
+git log --oneline
+
+//To add only modified files to index/staging area and leave untracked files, the command is 
+git add -u
+
+//to add all the changes to index/staging area irrespective of in which folder you present within repository, the command is
+git add -A
+
+//to move files back to working tree from staging/index area
+git reset file1.txt
+//Alterntive command
+git restore --staged file1.txt
+
+//Now if we want to remove the files/changes in working tree as well
+git restore file1.txt
+
+//To remove all the changes in both index/staging area and working tree at one shot
+git reset --hard
+
+//To remove untracked(new) files in working tree ('git reset --hard' can't touch untracked files)
+git clean -fd .
+fd-force delete
+.-all in WT
+
+//to need help on some command
+git reset --help
+
 
