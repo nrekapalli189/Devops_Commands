@@ -60,3 +60,28 @@ git log --stat (To view summary of each commit)
 
 git log --graph
 
+//branch commands
+git branch (to list exiting branches)
+git branch <branchname> (to create new branch)
+git checkout <branchname> to switch branches)
+git checkout -b <newbranchname>  (to create nb and switch at one shot)
+
+//merge command 
+git merge <sourcebranchname> (Note: to perform merge, we should be in destination branch)
+//To resolve conflicts
+git merge --continue
+
+//rebase command
+git rebase <sourchbranchname> (Note: to perform rebase, we sshould be in detination branch)
+//To resolve conflicts
+git rebase --continue
+
+//cherry-pick
+git cherry-pick <specificCOMMITid> (Note: to perform cherry-pick, we should be in the branch to which you want to apply cherry-pick)
+//To resolve conflicts
+git cherry-pick --continue
+
+
+
+
+
