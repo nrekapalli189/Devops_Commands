@@ -41,4 +41,22 @@ fd-force delete
 //to need help on some command
 git reset --help
 
+//Git log commands
+
+git log --all (to display all commits)
+git log -2 (last/previous 2 commits)
+
+git log --author naga (To filter commits done by specific author/developer)
+
+git log --after 1.days.ago (To filter by date) (in last 24 hours)
+git log --before 1.days.ago (until yesterday)
+git log --after "yyyy-mm-dd"
+git log --before "yyyy-mm-dd"
+git log --after "yyyy-mm-dd" --before "yyyy-mm-dd" (In between)
+
+git log -p (To view all the changes done in each commit)
+
+git log --stat (To view summary of each commit)
+
+git log --graph
 
