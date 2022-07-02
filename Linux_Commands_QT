@@ -5,3 +5,4 @@ date
 df -free space
 free -howmuch memory free
 man ls -for manual
+start . -is to opn hidden files in UI
