@@ -1,0 +1,17 @@
+mkdir gitpractice
+cd gitpractice
+git init
+//working tree
+touch file1.txt
+//Index/staging area
+git add file1.txt
+
+git config --global user.name "nrekapalli189"
+git config --global user.email "nrekapalli189@gmail.com"
+//local repository
+git commit -m "first change"
+git status
+
+//commit history
+git log
+
