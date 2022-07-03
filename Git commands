@@ -81,6 +81,25 @@ git cherry-pick <specificCOMMITid> (Note: to perform cherry-pick, we should be i
 //To resolve conflicts
 git cherry-pick --continue
 
+//to view the contents/author/date of a commit
+git cat-file -p <fullcommitID>
+git cat-file -t <ullcommitID>
+
+//command to setup connection b/w local and remote repo
+git remote add origin <repoUL>
+Origin-namee of def remote repo
+
+//git push
+git push origin <branchname>
+//to push all branches at a time
+git push --all origin
+
+//clone
+git clone <repoURL>
+
+//to display remote repo branches
+git branch -r
+
 
 
 
