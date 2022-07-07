@@ -41,6 +41,11 @@ fd-force delete
 //to need help on some command
 git reset --help
 
+//To revert the changes and go back to particular commit
+git reset <commitID> --hard
+<commitID> -is where you want go back in the past, chnages you have done after this commitID will be erased. 
+
+
 //Git log commands
 
 git log --all (to display all commits)
@@ -59,6 +64,8 @@ git log -p (To view all the changes done in each commit)
 git log --stat (To view summary of each commit)
 
 git log --graph
+git log --graph --all
+
 
 //branch commands
 git branch (to list exiting branches)
