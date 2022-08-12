@@ -1,0 +1,8 @@
+$(( ${number} +1 )) #expression for variable number
+
+$0 #scipt file path
+$1 #first positional argument
+$2 #second positional argument
+
+$? #Is the return code of earlier execution of a command. (Last command exit code)
+$# count of arguments passed next to shell execution command
