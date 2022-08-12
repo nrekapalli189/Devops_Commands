@@ -6,3 +6,8 @@ $2 #second positional argument
 
 $? #Is the return code of earlier execution of a command. (Last command exit code)
 $# count of arguments passed next to shell execution command
+
+reply,,  #means convert to lowercase
+reply^^  #means convert to uppercase
+
+$(!!) #Shortcut for getting previous command output in Linux.
