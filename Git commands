@@ -107,7 +107,10 @@ git clone <repoURL>
 //to display remote repo branches
 git branch -r
 
-
+//Additional commands
+#when you are trying to checkk out to new branch and if it is throwing below error
+error: pathspec 'branchname' did not find any filles known to git
+command: git remote update
 
 
 
