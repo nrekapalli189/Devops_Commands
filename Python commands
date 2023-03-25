@@ -1,0 +1,6 @@
+#to check python version
+python
+#To print a statement
+print("Hello")
+#To see zen of python
+import this
