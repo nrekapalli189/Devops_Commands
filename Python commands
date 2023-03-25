@@ -1,5 +1,7 @@
-#to check python version
+#To open python interactive shell in powershell/terminal
 python
+#To come out of executive interactive shell
+exit()
 #To print a statement
 print("Hello")
 #To see zen of python
