@@ -6,3 +6,17 @@ df -free space
 free -howmuch memory free
 man ls -for manual
 start . -is to opn hidden files in UI
+
+#tee 
+It is used after pipe symbol to write output of one file as input to anothet file 
+syntax: cat write.txt | tee new.txt
+echo "add text" | tee file1.txt file2.txt
+
+Alternate way: cat write.txt > new.txt
+
+#export 
+export command is used to set env varaible to current session. 
+Usually when you set env variables, it wont be effected until you restart the session
+using export we can avoid that.
+syntax: export name=value
+
