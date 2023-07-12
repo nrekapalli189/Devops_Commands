@@ -21,8 +21,10 @@ using export we can avoid that.
 syntax: export name=value
 
 #source
-Let's say, you have declared a=5 (one shell) and you want use this value inside shell script (another shell) without declaring variable again, then using
-'source' command you can call that variable. 
+Let's say, you have declared a=5 (shell) and you want use this value inside shell script (subshell) without declaring variable again, then using
+'source' command you can call that variable. To pass the value from one env/shell to another env/shell, we use sourc ing. 
 https://www.youtube.com/watch?v=oDGF1fXiUs0
 Linux tutorial: https://www.javatpoint.com/linux-source-command
 
+#What is /dev/null 2>&1?
+https://stackoverflow.com/questions/10508843/what-is-dev-null-21 
