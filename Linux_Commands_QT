@@ -20,3 +20,9 @@ Usually when you set env variables, it wont be effected until you restart the se
 using export we can avoid that.
 syntax: export name=value
 
+#source
+Let's say, you have declared a=5 (one shell) and you want use this value inside shell script (another shell) without declaring variable again, then using
+'source' command you can call that variable. 
+https://www.youtube.com/watch?v=oDGF1fXiUs0
+Linux tutorial: https://www.javatpoint.com/linux-source-command
+
