@@ -20,7 +20,7 @@ docker build -t App:1.0 .
 docker build -t App:2.0 -f dockerfile .
 -t tagname
 -f ilename
-
+. means dockerfile exits in pwd
 #To spin up a docker container
 docker run -d -p 85:80 App:2.0 
 docker run -d -p 85:80 imageid
