@@ -27,10 +27,10 @@ git reset file1.txt
 //Alterntive command
 git restore --staged file1.txt
 
-//Now if we want to remove the files/changes in working tree as well
+//Now if we want to remove the files/changes in working tree as well(works for only modified files, can't touch untracked)
 git restore file1.txt
 
-//To remove all the changes in both index/staging area and working tree at one shot
+//To remove all the changes in both index/staging area and working tree at one shot ((works for only modified files, can't touch untracked)
 git reset --hard
 
 //To remove untracked(new) files in working tree ('git reset --hard' can't touch untracked files)
