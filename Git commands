@@ -72,6 +72,7 @@ git branch (to list exiting branches)
 git branch <branchname> (to create new branch)
 git checkout <branchname> to switch branches)
 git checkout -b <newbranchname>  (to create nb and switch at one shot)
+git branch -r (to list exiting branches in remote repo like GitHub)
 
 //merge command 
 git merge <sourcebranchname> (Note: to perform merge, we should be in destination branch)
@@ -98,7 +99,7 @@ Origin-namee of def remote repo
 
 //git push
 git push origin <branchname>
-//to push all branches at a time
+//to push all branche chnages at a time
 git push --all origin
 
 //clone
@@ -112,5 +113,9 @@ git branch -r
 error: pathspec 'branchname' did not find any filles known to git
 command: git remote update
 
+#To modify incorrect uername and useremail which are used for commit
+git commit --amend --reset-author
 
+#To create Annotated tags
+git tag -a "23r4" -m "This is 4th release commit id released to production"
 
