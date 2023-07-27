@@ -134,3 +134,27 @@ Webserver:1.0 -existing image name
 nrekapalli189-docker hub username
 Webserver-repo name
 Latest-new image name
+
+##From Chintu Notes
+docker run -it –name nginx-container -h nginx.host1.com -p 99:80 nginx:latest
+docker run -d –name nginx-container1 -h nginx.host1.com -p 999:80 nginx:latest
+
+--name name of the container
+-h hostname
+-it means interactive mode(can pass input such as bin/bash, /sh)
+-d detached mode(runs in the background)
+
+#To view only container IDs
+docker ps -q
+docker ps -qa
+
+#To go inside the running container
+Docker exec -it containerID /bin/bash
+#To come out of the container
+Exit
+
+#To view complete metadata of a container
+Docker inspect containerID
+
+#To create a new file inside the docker container without actually going inside it
+Docker exec -d containerID /bin/bash -c “touch /opt/file1.txt
