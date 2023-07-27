@@ -118,4 +118,29 @@ git commit --amend --reset-author
 
 #To create Annotated tags
 git tag -a "23r4" -m "This is 4th release commit id released to production"
+-a specifies annotated tag
+-m specifies a tagging message, which is stored with the tag
+#To see the Tag details
+git show 23r4
+#To list the existing Tags
+git tag
+#To search for tags that match a particular pattern
+git tag -l "23*"
+-l or --list
+#To tag old commits
+git tag -a 23r1 <commitid>
+#To push tags to remote server(GitHub)
+git push origin <tagname>
+#To push multiple tags
+git push origin --tags
+#To delete tag
+git tag -d <tagname>
+#To remove tag in remote server
+git push origin :refs/tags/<tagname>
+git push origin --delete <tagname>
+#Checking out Tags
+git checkout 23r3
+git switch -c <new-branch-name>
+git checkout -b version2 v2.0.0
+
 
