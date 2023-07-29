@@ -76,6 +76,16 @@ docker run -it -v vol1:/opt/naga1 <imageName> /bin/bash
 vol1-new volume
 /opt/naga1-directory in container
 
+#Another example
+docker run --name myjenkins -v naga:/var/jenkins_home -p 8070:8080 -p 50000:50000 jenkins/jenkins
+Jenkins/Jenkins-image name
+Naga-volume
+/var/Jenkins_home- Jenkins def directory
+Myjenkins1-container name
+-p -port number
+8071:8080-port for webservers
+50001:50000- jnlp port number, it’s default port number for every application.
+
 #To attach hosted volume
 docker run -it -v /opt/docker:/opt/mountdir <imagename> /bin/bash
 /opt/docker is a shared/hosted volume 
@@ -90,6 +100,8 @@ docker run --name myjenkins -v naga:/var/jenkins_home -p 8070:8080 -p 50000:5000
 docker network ls
 docker network create naga
 docker network inspect naga
+docker network inspect bridge
+
 
 #command to check the memory
 df -h
