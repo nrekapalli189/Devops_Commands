@@ -102,6 +102,29 @@ docker network create naga
 docker network inspect naga
 docker network inspect bridge
 
+#remove a container from a network by disconnecting the container
+docker network disconnect bridge networktest
+bridge-default network
+networktest-container name
+Note: container Id can also be used instead of container name
+
+# To create your own bridge network
+docker network create -d bridge my_bridge
+The -d flag tells Docker to use the bridge driver for the new network.
+
+#To add containers to a network
+ docker run -d --net=my_bridge --name db training/postgres
+training/postgres-Image name
+db-container name
+--net=my_bridge -network name which we created
+
+#To add neetwork to a running container
+docker network connect my_bridge web
+my_bridge-network name
+web-container name
+
+#To inspect in json format
+docker inspect --format='{{json .NetworkSettings.Networks}}'  db
 
 #command to check the memory
 df -h
@@ -180,3 +203,9 @@ docker kill <container id>
 $ curl -i localhost:49160
 curl: (7) Failed to connect to localhost port 49160: Connection refused
 
+#To delete all containers
+docker rm $(docker ps -aq)
+#To delete all images
+docker rmi $(docker images -q)
+#To delete all untagged images
+docker rmi $(docker images -q --filter "dangling=true"
