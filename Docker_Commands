@@ -19,14 +19,16 @@ vi dockerfile
 docker build -t App:1.0 .
 docker build -t App:2.0 -f dockerfile .
 -t tagname
+The -t flag lets you tag your image so it's easier to find later using the docker images command
 -f ilename
 . means dockerfile exits in pwd
 #To spin up a docker container
 docker run -d -p 85:80 App:2.0 
 docker run -d -p 85:80 imageid
 -d detached mode
+Running your image with -d runs the container in detached mode, leaving the container running in the background
 -p port number
--d detached mode
+-p flag redirects a public port to a private port inside the container.
 
 #To view running containers
 docker ps
@@ -158,3 +160,11 @@ Docker inspect containerID
 
 #To create a new file inside the docker container without actually going inside it
 Docker exec -d containerID /bin/bash -c “touch /opt/file1.txt
+
+## Kill/shutdown our running container
+docker kill <container id>
+
+# Confirm that the app has stopped or running
+$ curl -i localhost:49160
+curl: (7) Failed to connect to localhost port 49160: Connection refused
+
