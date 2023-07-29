@@ -145,8 +145,18 @@ docker rmi <imageID/name>
 docker rmi $(docker images -q --filter "dangling=true")
 
 #docker-compose commands
-#To start multiple conyainers at a time
+#To start multiple containers at a time
 docker-compose up -d
+#To stop your WordPress application:
+docker-compose down
+Note: When a Docker container is stopped, it is also deleted
+#If you want to remove associated data
+docker-compose down --volumes
+#Update WordPress
+The docker-compose.yml specifies the latest version of the WordPress image, so it’s easy to update your WordPress version:
+commands:
+docker-compose down
+docker-compose pull && docker-compose up -d
 
 #To check logs of a specific container
 docker logs <containerName/ID>
