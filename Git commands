@@ -143,4 +143,9 @@ git checkout 23r3
 git switch -c <new-branch-name>
 git checkout -b version2 v2.0.0
 
-
+##To change the previous commits
+#To move the Head back to 3 positions
+git rebase -i HEAD~3
+-i specify interactive rebasing
+#If you want to modify commit message of latest commit
+git commit --amend
