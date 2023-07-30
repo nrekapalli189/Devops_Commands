@@ -104,6 +104,8 @@ git push --all origin
 
 //clone
 git clone <repoURL>
+#To clone particular branch
+git clone -b <bn> <repourl>
 
 //to display remote repo branches
 git branch -r
