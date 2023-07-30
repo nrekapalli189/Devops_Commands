@@ -151,3 +151,16 @@ git rebase -i HEAD~3
 -i specify interactive rebasing
 #If you want to modify commit message of latest commit
 git commit --amend
+
+##stash(fifth area of git)
+used to store unfinished work in fifth area in git temp
+#To move code from index/staging area to stash area
+git stash
+#To retrieve back to index area and remove it in stash area(when you move code from staging area to stash, and retrive it back, it will go to index area, not to staging)
+git stash pop
+#To see the list in fifth/stash area
+git stash list
+#To retrieve back to index area and keep it in stash area as well
+git stash apply
+
+
