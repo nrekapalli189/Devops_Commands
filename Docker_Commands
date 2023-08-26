@@ -1,8 +1,11 @@
 #Default working directory of docker
 /var/lib/docker
 
+docker info
+
 #To view created images
 docker images
+docker image ls (new command)
 
 #To view sample images available in docker registry
 docker search tomcat
@@ -32,6 +35,7 @@ Running your image with -d runs the container in detached mode, leaving the cont
 
 #To view running containers
 docker ps
+docker container ls (new command)
 
 #To view both stopped and running containers
 docker ps -a
