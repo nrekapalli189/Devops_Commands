@@ -223,3 +223,7 @@ docker rm $(docker ps -aq)
 docker rmi $(docker images -q)
 #To delete all untagged images
 docker rmi $(docker images -q --filter "dangling=true"
+
+#To view the approximate size of a running container
+docker ps -s
+
