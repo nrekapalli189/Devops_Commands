@@ -227,3 +227,7 @@ docker rmi $(docker images -q --filter "dangling=true"
 #To view the approximate size of a running container
 docker ps -s
 
+#To make container run for 1 day and die
+docker container run myapache2 sleep 1d
+
+
