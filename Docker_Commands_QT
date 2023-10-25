@@ -1,0 +1,28 @@
+#To build an image
+docker image build -t myapp:0.1 .
+-t tag name
+. means Dockerfile is present PWD
+default dockerfile name-Dockerfile
+if dockerfile name specified differently 
+docker image build -t myapp:0.1 -f mydockerfile
+#To list images
+docker image ls
+
+
+#To run containers in detached mode
+docker container run -d jenkins
+# To create a container and login into interactive shell
+docker container run -it jenkins /bin/bash
+docker container run -it alpine /bin/sh
+#To list running containers
+docker container ls
+docker ps
+#To list both running and stopped continers
+docker container ls -a
+docker ps -a
+#To remove containers
+docker container rm <name-or-id>
+docker container rm <name-or-id-container1> <name-or-id-container2> ..
+docker container rm -f $(docker container ls -a -q)
+-f means force delete
+-q displays only container ids
