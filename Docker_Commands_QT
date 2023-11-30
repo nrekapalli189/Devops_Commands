@@ -26,3 +26,14 @@ docker container rm <name-or-id-container1> <name-or-id-container2> ..
 docker container rm -f $(docker container ls -a -q)
 -f means force delete
 -q displays only container ids
+
+Docker volumes:
+#To create/attach volume to while spinning up the container
+docker container run -it -v /test:/test mysql /bin/bash
+/test:/test--->host:container (source:target)
+docker volume create myvol
+docker volume ls
+docker volume inspect myvol
+docker container run --name cont2 -it --mount source=myvol,target=/jars openjdk:8 /bin/bash
+
+
