@@ -39,6 +39,9 @@ docker container run --name cont2 -it --mount source=myvol,target=/jars openjdk:
 docker container run --name cont3 --mount type=bind,source=/app,target=/jars -d -p 8080:8080 openjdk:8 java -jar /jars/spring-petclinic.jar
 #tmpfs mount
 docker run -d -it --name cont4 --mount type=tmpfs,destination=/app nginx:latest
+---------------------------------------------------------------------------------
 #command to know container stats
 docker stats
+
+docker container start/stop/pause/unpause tomcat
 
