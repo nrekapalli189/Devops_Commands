@@ -35,5 +35,10 @@ docker volume create myvol
 docker volume ls
 docker volume inspect myvol
 docker container run --name cont2 -it --mount source=myvol,target=/jars openjdk:8 /bin/bash
-
+#Bind mount volume
+docker container run --name cont3 --mount type=bind,source=/app,target=/jars -d -p 8080:8080 openjdk:8 java -jar /jars/spring-petclinic.jar
+#tmpfs mount
+docker run -d -it --name cont4 --mount type=tmpfs,destination=/app nginx:latest
+#command to know container stats
+docker stats
 
