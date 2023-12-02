@@ -44,4 +44,22 @@ docker run -d -it --name cont4 --mount type=tmpfs,destination=/app nginx:latest
 docker stats
 
 docker container start/stop/pause/unpause tomcat
+--------------------------------------------------------------------------
+Docker network commands:
+#To create a new bridge network with range as 10.11.0.0/16 and name as mybridge
+docker network create --driver bridge --subnet 10.11.0.0/16 mybridge
+docker network ls
+docker network inspect mybridge
+#To assign mybridge network to a container p1
+docker container run --name p1 --network mybridge -d alpine sleep 1d
+# test for the connectivity between p1 and p2 using ip and hostnames
+docker exec p1 ping -c 3 10.11.0.3
+docker exec p1 ping -c 3 p2
+Note: -c 3 denotes transfer only 3 packets
+#To connect a running container 'c1' to an existing user-defined bridge 'mybridge'
+docker network connect mybridge c1
+#To disconnect a container from a user-defined bridge
+docker network disconnect mybridge c1
+
+
 
