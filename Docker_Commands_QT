@@ -60,6 +60,26 @@ Note: -c 3 denotes transfer only 3 packets
 docker network connect mybridge c1
 #To disconnect a container from a user-defined bridge
 docker network disconnect mybridge c1
+-----------------------------------------------------------------------------------
+docker swarm commands:
+#To create a service
+docker service create --replicas 2 --name tomcat tomcat:8
+docker service ls
+#To inspect
+docker service inspect --pretty tomcat
+docker service ps tomcat
+docker node ls
+docker service rm tomcat
+docker node ps
+docker node ps ip-172-31-25-26
+#To scale up services/applications
+docker service scale tomcat=4
+#Rolling updates(zero downtime)
+docker service create --name jenkins --replicas 2 --update-delay 10s --publish published=8081, target=8080 jenkins:1.609.2
+To rollput new verion with zero downtime
+docker service update --image jenkins:latest jenkins
+Note: Rolling updates will happen in such a way that it will stop one old version container first and create one new container. 
+Then it will stop second old container and create second new container. It’s one at a time
 
 
 
