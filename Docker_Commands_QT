@@ -80,6 +80,9 @@ To rollput new verion with zero downtime
 docker service update --image jenkins:latest jenkins
 Note: Rolling updates will happen in such a way that it will stop one old version container first and create one new container. 
 Then it will stop second old container and create second new container. It’s one at a time
-
-
+----------------------------------------------------------------------------
+ENV:
+docker container run -e "DBIP=192.168.10.11" -it test:0.2 /bin/sh
+ARG:
+docker image build --build-arg TEST=1 -t test:0.7 .
 
