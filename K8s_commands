@@ -51,3 +51,10 @@ kubectl logs <podName> -n <namespace>
 #Volumes
 kubectl create -f <yamlFile>
 kubectl get pv
+
+kubectl apply -f openmrs-deploy.yaml
+kubectl get deployments
+kubectl get deployments -w
+kubectl get rs
+kubectl get pods
+kubectl get pods -o wide
