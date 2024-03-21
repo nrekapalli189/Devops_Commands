@@ -164,6 +164,7 @@ git stash list
 git stash apply
 
 Frequently used
+gir clone <repoURL>
 git remote update
 git checkout <bn>
 git checkout -b <bn>
