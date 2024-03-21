@@ -163,4 +163,13 @@ git stash list
 #To retrieve back to index area and keep it in stash area as well
 git stash apply
 
+Frequently used
+git remote update
+git checkout <bn>
+git checkout -b <bn>
+git pull origin <bn>
+git add .
+git commit -m "message"
+git push origin <bn>
+
 
