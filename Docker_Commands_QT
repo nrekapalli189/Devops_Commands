@@ -60,8 +60,8 @@ Note: -c 3 denotes transfer only 3 packets
 docker network connect mybridge c1
 #To disconnect a container from a user-defined bridge
 docker network disconnect mybridge c1
-#To know the IP address of a container
-get inside the container and type 'ip addr'
+#To know the IP address and memory usage of a container
+get inside the container and type 'ip addr' for ip adress and 'top' for memory usage.
 -----------------------------------------------------------------------------------
 docker swarm commands:
 #To create a service
