@@ -34,7 +34,12 @@ docker container run -it -v /test:/test mysql /bin/bash
 docker volume create myvol
 docker volume ls
 docker volume inspect myvol
+Using --mount
 docker container run --name cont2 -it --mount source=myvol,target=/jars openjdk:8 /bin/bash
+Using --volume
+docker container run --name cont2 -it --volume myvol:/jars openjdk:8 /bin/bash
+Note: both have the same result
+
 #Bind mount volume
 docker container run --name cont3 --mount type=bind,source=/app,target=/jars -d -p 8080:8080 openjdk:8 java -jar /jars/spring-petclinic.jar
 #tmpfs mount
