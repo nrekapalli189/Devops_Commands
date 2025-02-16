@@ -34,6 +34,13 @@ docker container rm <name-or-id-container1> <name-or-id-container2> ..
 docker container rm -f $(docker container ls -a -q)
 -f means force delete
 -q displays only container ids
+#To start/stop/pause/unpause containers
+docker container start/stop/pause/unpause tomcat
+#To know the process(PID) that your container running in
+docker container top tomcat
+#To know details about container
+docker container inspect tomcat | less
+
 
 Docker volumes:
 #To create/attach volume to while spinning up the container
