@@ -11,9 +11,13 @@ docker image ls
 
 #To run containers in detached mode
 docker container run -d jenkins
-# To create a container and login into interactive shell
+# To create a container and login into interactive shell at the same time
 docker container run -it jenkins /bin/bash
 docker container run -it alpine /bin/sh
+#To login into container after it is created
+docker container exec <container name>/<container id>
+#if you want to run some command inside the container along with login
+docker container exec <container name>/<container id> ls /
 #To list running containers
 docker container ls
 docker ps
