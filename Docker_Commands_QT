@@ -70,6 +70,13 @@ docker stats
 docker container start/stop/pause/unpause tomcat
 --------------------------------------------------------------------------
 Docker network commands:
+#port forwarding
+docker container run -d -p 8081:8080 tomcat:8
+8081-host machine port(app can be accessed using this port)
+8080-container port
+#To assign random random port number
+docker container run --name jenkins3 -d -P jenkins
+-P will allocate some random port number
 #To create a new bridge network with range as 10.11.0.0/16 and name as mybridge
 docker network create --driver bridge --subnet 10.11.0.0/16 mybridge
 docker network ls
