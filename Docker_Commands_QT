@@ -17,6 +17,11 @@ docker container run -it alpine /bin/sh
 #To run commands inside a running container(already running) without logging in
 docker container exec <container name>/<container id> ls /
 docker container exec <container name>/<container id> ip addr
+#To run commands inside a running container with login in
+docker container exec -it tomcat1 /bin/bash
+now inside docker container, can run commands
+ps -eaf
+exit (To exit from the container)
 #To list running containers
 docker container ls
 docker ps
