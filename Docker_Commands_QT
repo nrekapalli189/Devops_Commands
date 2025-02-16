@@ -7,6 +7,8 @@ if dockerfile name specified differently
 docker image build -t myapp:0.1 -f mydockerfile
 #To list images
 docker image ls
+#To know docker image history
+docker image history <imagename>:<tag>
 
 
 #To run containers in detached mode
