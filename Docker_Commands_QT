@@ -40,6 +40,8 @@ docker container start/stop/pause/unpause tomcat
 docker container top tomcat
 #To know details about container
 docker container inspect tomcat | less
+#To know the logs of a container
+docker logs tomcat
 
 
 Docker volumes:
