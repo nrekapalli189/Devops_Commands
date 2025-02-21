@@ -58,3 +58,7 @@ kubectl get deployments -w
 kubectl get rs
 kubectl get pods
 kubectl get pods -o wide
+
+#configMap:
+If you already have an application.properties or application.yml file, create a ConfigMap from it:
+kubectl create configmap my-app-config --from-file=application.properties
